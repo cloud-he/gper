@@ -11,6 +11,10 @@
     <properties>
         <!-- dependency versions -->
         <servlet.api.version>2.4</servlet.api.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- dependency versions -->
+        <spring.version>5.0.2.RELEASE</spring.version>
     </properties>
     <dependencies>
         <dependency>
@@ -61,6 +65,25 @@
             <scope>provided</scope>
         </dependency>
         <!-- requied end -->
+        <!-- spring framework start -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.5</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>${artifactId}</finalName>
