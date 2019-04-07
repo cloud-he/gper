@@ -24,6 +24,13 @@ public class CardServiceTest {
     public void testGetCardInfoDto2(){
         CardInfoDto dto = cardService.getCardInfoDto2();
         System.out.println(dto);
+        assertEquals(true,dto.getCardType() == cardService.getAttribute().getCardType());
+    }
+
+    @Test
+    public void testGetCardInfoDto3(){
+        CardInfoDto dto = cardService.getCardInfoDto3();
+        System.out.println(dto);
         assertEquals(false,dto.getCardType() == cardService.getAttribute().getCardType());
     }
 }

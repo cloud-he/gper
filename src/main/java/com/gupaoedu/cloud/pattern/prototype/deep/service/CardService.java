@@ -9,6 +9,8 @@ import org.apache.commons.beanutils.BeanUtils;
 import java.lang.reflect.InvocationTargetException;
 import java.time.LocalDateTime;
 
+import cmc.common.utility.copy.CopyUtil;
+
 /**
  * 卡服务
  */
@@ -67,6 +69,16 @@ public class CardService {
             e.printStackTrace();
         }
         return dto;
+    }
+
+    /**
+     * 深度克隆
+     * @return 卡信息
+     */
+    public CardInfoDto getCardInfoDto3(){
+        CardInfo cardInfo = getCardInfo();
+        this.cardInfo = cardInfo;
+        return CopyUtil.copy(cardInfo, CardInfoDto.class);
     }
 
 
