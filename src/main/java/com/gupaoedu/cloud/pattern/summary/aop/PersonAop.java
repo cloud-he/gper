@@ -9,9 +9,9 @@ import org.springframework.stereotype.Component;
  */
 @Aspect
 @Component
-public class EntityAop {
+public class PersonAop {
 
-    @Pointcut("execution(public * com.gupaoedu.cloud.pattern.summary.aop.Entity.doSomething())")
+    @Pointcut("execution(public * com.gupaoedu.cloud.pattern.summary.aop.Person.doSomething())")
     public void point(){}
 
     @Before("point()")
